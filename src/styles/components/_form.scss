@@ -1,0 +1,51 @@
+.default-form {
+    .form-item {
+      &__label {
+        font-weight: 500;
+        font-size: 16px;
+        color: $color_black;
+      }
+      > .ant-input-affix-wrapper {
+        height: $input_height;
+      }
+      > .ant-input {
+        height: $input_height;
+      }
+      .ant-select-single {
+        height: $input_height;
+        width: 100%;
+        .ant-select-selector {
+          height: $input_height;
+        }
+        .ant-select-selection-item {
+          display: flex;
+          align-items: center;
+        }
+        .ant-select-selection-placeholder {
+          line-height: $input_height;
+        }
+      }
+  
+      .ant-select-multiple {
+        width: 100%;
+        height: $input_height;
+  
+        .ant-select-selector {
+          height: $input_height;
+          padding-left: 12px;
+        }
+        .ant-select-selection-search {
+          margin-inline-start: 0px;
+          width: 0px;
+        }
+      }
+      .ant-picker-range {
+        width: 100%;
+        height: 46px;
+      }
+      .ant-picker {
+        width: 100%;
+        height: 48px;
+      }
+    }
+}

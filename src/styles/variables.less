@@ -1,0 +1,89 @@
+@primary-color: #d7525e; // primary color for all components
+@success-color: #52c41a; // success state color
+@warning-color: #faad14; // warning state color
+@error-color: #f5222d; // error state color
+@font-size-base: 14px; // major text font size
+@heading-color: rgba(0, 0, 0, 0.85); // heading text color
+@text-color: rgba(0, 0, 0, 0.65); // major text color
+@text-color-secondary: rgba(0, 0, 0, 0.45); // secondary text color
+@disabled-color: rgba(0, 0, 0, 0.25); // disable state color
+@border-radius-base: 10px; // major border radius
+@border-color-base: #d9d9d9; // major border color
+@box-shadow-base: 0 3px 6px -4px rgba(0, 0, 0, 0.12),
+  0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
+@layout-header-background: #f5f5f5;
+@layout-body-background: #f5f5f5;
+@layout-footer-background: rgba(255, 255, 255, 0.6);
+@layout-sider-box-shadow: 1px 0px 0px #d9d9d9, 2px 0px 0px #ffffff;
+@layout-footer-box-shadow: 0px -1px 0px #ffffff, inset 0px 1px 0px #d9d9d9;
+
+@menu-item-active-color: #d7525e;
+@menu-item-active-background: #fef0f2;
+@menu-item-default-color: #797979;
+@card-shadow: 1px 2px 4px rgba(179, 179, 179, 0.9);
+@card-radius: 20px;
+
+@modal-header-title-font-size: 24px;
+@modal-header-title-line-height: 32px;
+
+@height-sidebar-item: 80px;
+@height-sidebar-drawer-button: 100px;
+@height-sidebar-drawer-button-phone: 70px;
+@width-navbar-item: 99px;
+@height-layout-footer: 102px;
+@height-layout-footer-phone: 70px;
+@height-button-primary: 50px;
+@min-width-button-primary: 205px;
+@font-primary: "Noto Sans";
+@text-color-base: #202020;
+@font-size-title: 24px;
+@font-size-base: 16px;
+@font-weight-bold: 600;
+@font-weight-normal: 400;
+@line-height-normal: 24px;
+@padding-base: 20px;
+@line-height-large: 32px;
+@font-size-xl: 18px;
+@padding-none: 0;
+@bg-black-blur: rgba(0, 0, 0, 0.5);
+
+// Border radius
+@border-radius-xl: 20px;
+@border-radius-circle: 50%;
+
+// color
+@white: #ffffff;
+@color-success: #60bfa1;
+@color-danger: #b7282e;
+@color-des: #4d4d4d;
+@color-step: #a6a6a6;
+@color-grey: #797979;
+@color-black-base: #1d1d1d;
+
+@width-icon-back: 42px;
+@height-icon-back: 42px;
+
+@screen-xs-min: 480px;
+@screen-sm-antd-min: 576px;
+@screen-sm-min: 768px;
+@screen-md-min: 992px;
+@screen-lg-min: 1200px;
+
+@screen-xs-max: (@screen-sm-min - 1);
+@screen-sm-max: (@screen-md-min - 1);
+@screen-md-max: (@screen-lg-min - 1);
+
+@screen-landscape-se-min: 380px;
+@screen-landscape-se-max: (@screen-landscape-se-min + 1);
+@screen-landscape-8: 450px;
+
+@phone: ~"only screen and (max-width: @{screen-xs-min})";
+@phone-sm-antd: ~"only screen and (max-width: @{screen-sm-antd-min})";
+@phone-strict: ~"only screen and (min-width: @{screen-xs-min}) and (max-width: @{screen-xs-max})";
+@landscape-phone-min: ~"only screen and (max-height: @{screen-landscape-se-min})";
+@landscape-phone-max: ~"only screen and (min-height: @{screen-landscape-se-max}) and (max-height: @{screen-landscape-8})";
+@tablet: ~"only screen and (min-width: @{screen-sm-min})";
+@tablet-strict: ~"only screen and (min-width: @{screen-sm-min}) and (max-width: @{screen-sm-max})";
+@desktop: ~"only screen and (min-width: @{screen-md-min})";
+@desktop-strict: ~"only screen and (min-width: @{screen-md-min}) and (max-width: @{screen-md-max})";
+@large: ~"only screen and (min-width: @{screen-lg-min})";
