@@ -1,5 +1,3 @@
-import { memo, FC } from "react";
-import { Field, ErrorMessage, FieldInputProps, FormikProps } from "formik";
 import {
   Input,
   Checkbox,
@@ -9,12 +7,14 @@ import {
   DatePicker,
   TimePicker,
 } from "antd";
-import cx from "classnames";
 import { FormItemType } from "./FormItemType";
 import { SelectInput } from "./SelectInput";
 import { NumberInput } from "./NumberInput";
 import { HtmlInput } from "./HtmlInput";
 import { MAX_LENGTH_INPUT } from "@/src/constants/common";
+import { ErrorMessage, Field, FieldInputProps, FormikProps } from "formik";
+import { FC, memo } from "react";
+import cx from "classnames";
 
 const { Password, Search, TextArea } = Input;
 const { RangePicker } = DatePicker;

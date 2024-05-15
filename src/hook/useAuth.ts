@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { useRouter } from "next/router";
 import { selectUser } from "../store/auth/authSeletor";
+import { useEffect, useState } from "react";
 
 const useAuth = () => {
     const router = useRouter();
