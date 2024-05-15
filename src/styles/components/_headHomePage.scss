@@ -1,0 +1,63 @@
+.page-header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    padding: 20px 0;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.page-header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.page-header button {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 14px 20px;
+    border-radius: 10px;
+    color: white;
+    background: #08a6df;
+    transition: background 0.3s;
+}
+
+.page-header button svg {
+    flex-shrink: 0;
+    margin-left: 5px;
+    fill: currentColor;
+
+}
+.page-header button:hover {
+    background: #0ab8f6;
+}
+
+.page-header.is-sticky {
+    position: fixed;
+    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.1);
+    padding: 8px 0;
+    backdrop-filter: blur(10px);
+    animation: slideDown 0.35s ease-out;
+}
+
+.page-header.is-sticky img {
+    max-width: 80%;
+}
+
+.page-header.is-sticky button {
+    font-size: 14px;
+    padding: 7px 10px;
+}
+
+@keyframes slideDown {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+}

@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { addUser, deleteUser, updateUser } from "../store/auth";
-import { useRouter } from "next/router";
 import { selectUser } from "../store/auth/authSeletor";
+import { useRouter } from "next/router";
 
 const Home = () => {
     const router = useRouter();
@@ -22,7 +22,7 @@ const Home = () => {
     };
 
     return (
-        <div className="p-12 gap-12 grid">
+        <div className="p-12 gap-12 grid h-[2400px]">
             <div>hello world</div>
             <div>
                 <span className="cursor-pointer" style={{color: 'red'}} onClick={add}>Add user to store</span>
