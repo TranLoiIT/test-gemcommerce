@@ -1,20 +1,20 @@
+import { MAX_LENGTH_INPUT } from "@/src/constants/common";
 import {
-  Input,
   Checkbox,
-  Switch,
+  DatePicker,
+  Input,
   Radio,
   Space,
-  DatePicker,
+  Switch,
   TimePicker,
 } from "antd";
-import { FormItemType } from "./FormItemType";
-import { SelectInput } from "./SelectInput";
-import { NumberInput } from "./NumberInput";
-import { HtmlInput } from "./HtmlInput";
-import { MAX_LENGTH_INPUT } from "@/src/constants/common";
+import cx from "classnames";
 import { ErrorMessage, Field, FieldInputProps, FormikProps } from "formik";
 import { FC, memo } from "react";
-import cx from "classnames";
+import { FormItemType } from "./FormItemType";
+import { HtmlInput } from "./HtmlInput";
+import { NumberInput } from "./NumberInput";
+import { SelectInput } from "./SelectInput";
 
 const { Password, Search, TextArea } = Input;
 const { RangePicker } = DatePicker;

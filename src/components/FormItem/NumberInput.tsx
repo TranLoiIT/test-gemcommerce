@@ -1,5 +1,4 @@
 // import NumberFormat from "#/components/NumberFormat";
-import { Input } from "antd";
 import { FieldInputProps, FormikProps } from "formik";
 
 export const NumberInput: React.FC<{
@@ -43,9 +42,9 @@ export const NumberInput: React.FC<{
         {...field}
         {...props}
         onChange={onChange ?? handleChange}
-      />
-      {unit && <span className="unit">{unit}</span>} */}
-      cannot
+      /> */}
+      {/* {unit && <span className="unit">{unit}</span>} */}
+      {/* cannot */}
     </>
   );
 };

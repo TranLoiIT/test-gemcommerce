@@ -11,8 +11,8 @@ const inter = Inter({ subsets: ["latin"] });
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
     <Provider store={store}>
-      <HeadHomePage />
       <main className={inter.className}>
+        <HeadHomePage />
         <Component {...pageProps} />
       </main>
     </Provider>

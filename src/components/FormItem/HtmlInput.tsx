@@ -1,4 +1,5 @@
 import { FieldInputProps, FormikProps } from "formik";
+import TextEditor from "./TextEditor";
 
 export const HtmlInput: React.FC<{
   field: FieldInputProps<any>;
@@ -12,13 +13,12 @@ export const HtmlInput: React.FC<{
   };
 
   return (
-    <></>
-    // <TextEditor
-    //   value={field.value}
-    //   {...props}
-    //   onSetContent={(value) => {
-    //     handleValueChange(value);
-    //   }}
-    // />
+    <TextEditor
+      value={field.value}
+      {...props}
+      onSetContent={(value) => {
+        handleValueChange(value);
+      }}
+    />
   );
 };
