@@ -17,7 +17,6 @@ export const SelectInput: FC<{
   onChange?: any;
 }> = ({ field, form, options, className, onChange, ...props }) => {
   const onChangeSelect = (values: any) => {
-    console.log("values :>> ", values);
     form.setFieldValue(field.name, values);
   };
   return (

@@ -100,11 +100,7 @@ export const SearchInput: FC<{
   props: any;
 }> = ({ field, form, enterButton, ...props }) => {
   return (
-    <Search
-      enterButton={enterButton ? enterButton : "Search"}
-      {...field}
-      {...props}
-    />
+    <Search enterButton={enterButton && enterButton} {...field} {...props} />
   );
 };
 

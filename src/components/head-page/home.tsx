@@ -1,37 +1,72 @@
+import { FacebookFilled, PhoneFilled, SearchOutlined } from "@ant-design/icons";
+import { Input, Tooltip } from "antd";
 import { useEffect } from "react";
 
 const HeadHomePage = () => {
+  useEffect(() => {
+    const header = document.querySelector(".page-header");
+    const toggleClass = "is-sticky";
+    window.addEventListener("scroll", () => {
+      const currentScroll = window.pageYOffset;
+      if (currentScroll > 150) {
+        header && header.classList.add(toggleClass);
+      } else {
+        header && header.classList.remove(toggleClass);
+      }
+    });
+  }, []);
 
-    useEffect(() => {
-        const header = document.querySelector(".page-header");
-        const toggleClass = "is-sticky";
-        window.addEventListener("scroll", () => {
-        const currentScroll = window.pageYOffset;
-        if (currentScroll > 150) {
-            header && header.classList.add(toggleClass);
-        } else {
-            header && header.classList.remove(toggleClass);
-        }
-        });
-    }, [])
-
-    return (
-        <header className="page-header flex justify-center items-center">
-            <div className="container">
-                <nav>
-                <a href="">
-                    <img width="178" height="38" src="horizontal-logo-mobile.svg" alt="forecastr logo" />
-                </a>
-                <button type="button">
-                    GET STARTED
-                    <svg xmlns="https://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
-                    <path d="M7.411 21.39l-4.054 2.61-.266-1.053c-.187-.744-.086-1.534.282-2.199l2.617-4.729c.387 1.6.848 3.272 1.421 5.371zm13.215-.642l-2.646-4.784c-.391 1.656-.803 3.22-1.369 5.441l4.032 2.595.266-1.053c.186-.743.085-1.533-.283-2.199zm-10.073 3.252h2.895l.552-2h-4l.553 2zm1.447-24c-3.489 2.503-5 5.488-5 9.191 0 3.34 1.146 7.275 2.38 11.809h5.273c1.181-4.668 2.312-8.577 2.347-11.844.04-3.731-1.441-6.639-5-9.156zm.012 2.543c1.379 1.201 2.236 2.491 2.662 3.996-.558.304-1.607.461-2.674.461-1.039 0-2.072-.145-2.641-.433.442-1.512 1.304-2.824 2.653-4.024z" />
-                    </svg>
-                </button>
-                </nav>
+  return (
+    <>
+      <header className="page-header">
+        <div className="bg-primary-hearder header-top flex justify-center py-[3px]">
+          <div className="container flex justify-between items-center">
+            <div className="text-xs">aaaaaaaaaaaaaaaaaa</div>
+            <div className="flex gap-1">
+              <Tooltip title="Theo dõi trên facebook">
+                <FacebookFilled
+                  className="cursor-pointer"
+                  style={{ fontSize: 20 }}
+                />
+              </Tooltip>
+              <Tooltip title="Gửi gmail cho chúng tôi">
+                <FacebookFilled
+                  className="cursor-pointer"
+                  style={{ fontSize: 20 }}
+                />
+              </Tooltip>
             </div>
-        </header>
-    );
-}
- 
+          </div>
+        </div>
+        <div className="flex justify-center items-center py-5">
+          <div className="container">
+            <nav>
+              {/* logo web */}
+              <div className="cursor-pointer w-[120px]">
+                <img src="" alt="logo" />
+              </div>
+              {/* search item */}
+              <div className="search-field">
+                <div className="relative">
+                  <Input name="keyword" placeholder={"Quý khách cần gì ạ..."} />
+                  <div className="icon-search">
+                    <SearchOutlined
+                      style={{ fontWeight: 900, color: "#5f5f5f" }}
+                    />
+                  </div>
+                </div>
+              </div>
+              {/* phone, inf */}
+              <div className="flex justify-start items-center w-[120px]">
+                <PhoneFilled style={{ fontSize: 18, color: "#5f5f5f" }} />
+                <div className="ml-[4px]">0123456789</div>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </header>
+    </>
+  );
+};
+
 export default HeadHomePage;
