@@ -29,6 +29,12 @@
     animation: slideDown 0.35s ease-out;
 }
 
+.header-top.is-hidden {
+    display: none;
+    backdrop-filter: blur(10px);
+    animation: slideDown 0.35s ease-out;
+}
+
 .page-header.is-sticky img {
     max-width: 80%;
 }
@@ -62,4 +68,9 @@
 
 .page-header .header-top {
     color: #FFFFFF;
+}
+
+.ant-tooltip {
+    max-width: fit-content;
+    min-width: fit-content;
 }
