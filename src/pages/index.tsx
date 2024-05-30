@@ -1,6 +1,6 @@
 const Home = () => {
   return (
-    <div className="">
+    <div className="h-[2400px]">
       {/* banner home page */}
       <div></div>
       {/* content page */}
