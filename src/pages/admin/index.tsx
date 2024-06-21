@@ -1,36 +1,42 @@
-import useAuth from "@/src/hook/useAuth";
-import { deleteUser } from "@/src/store/auth";
-import { useRouter } from "next/navigation";
-import { useDispatch } from "react-redux";
+import { Table } from "antd";
 
 const Dashboard = () => {
-  // Layout Admin
-  const dispatch = useDispatch();
-  const router = useRouter();
-  const { checkSuccess } = useAuth();
-  if (!checkSuccess) {
-    return null;
-  }
+  const dataSource = [
+    {
+      key: "1",
+      name: "Mike",
+      age: 32,
+      address: "10 Downing Street",
+    },
+    {
+      key: "2",
+      name: "John",
+      age: 42,
+      address: "10 Downing Street",
+    },
+  ];
 
-  const logout = () => {
-    router.push("/");
-    setTimeout(() => {
-      dispatch(deleteUser({}));
-    }, 1000);
-  };
-
+  const columns = [
+    {
+      title: "Name",
+      dataIndex: "name",
+      key: "name",
+    },
+    {
+      title: "Age",
+      dataIndex: "age",
+      key: "age",
+    },
+    {
+      title: "Address",
+      dataIndex: "address",
+      key: "address",
+    },
+  ];
   return (
-    <div className="p-12 gap-12 grid">
-      <div>Admin Page</div>
-      <div>
-        <span
-          className="cursor-pointer"
-          style={{ color: "red" }}
-          onClick={logout}
-        >
-          logout
-        </span>
-      </div>
+    <div className="p-4">
+      Thống kê
+      <Table dataSource={dataSource} columns={columns} />
     </div>
   );
 };

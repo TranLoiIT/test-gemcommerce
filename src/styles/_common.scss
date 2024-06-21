@@ -1,3 +1,23 @@
 .bg-primary-hearder {
     background-color: $fs_color_primary;
 }
+
+.text-error {
+    color: red;
+    font-size: 12px;
+}
+
+.form-item {
+    min-height: 92px;
+    max-height: 92px;
+}
+
+.ant-menu-light.ant-menu-root.ant-menu-vertical {
+    border-inline-end: none !important;
+}
+
+.ant-menu-inline.ant-menu-root .ant-menu-item >.ant-menu-title-content {
+    font-size: 14px;
+    font-weight: 500;
+    padding-left: 12px;
+}

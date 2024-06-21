@@ -7,9 +7,9 @@ import {
 } from "@ant-design/icons";
 import { Collapse, Drawer, Input, Tooltip } from "antd";
 import { useEffect, useState } from "react";
-import RenderTooltip from "./renderTootip";
+import RenderTooltip from "./RenderTootip";
 
-const DataExample = new Array(5).fill().map(() => ({
+const DataExample = new Array(5).fill(null).map(() => ({
   label: "Trang Điểm",
   key: "trang-diem",
   children: [
