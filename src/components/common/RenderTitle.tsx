@@ -6,17 +6,19 @@ interface RenderTitleProps {
   title: string | ReactNode;
   renderBtn?: ReactNode;
   isBtnBack?: boolean;
+  style?: React.CSSProperties;
 }
 
 const RenderTitle: React.FC<RenderTitleProps> = ({
   title,
   renderBtn,
   isBtnBack,
+  style = {},
 }) => {
   const router = useRouter();
   return (
     <div className="flex justify-between items-center">
-      <div className="flex gap-5 font-bold text-[24px]">
+      <div className="flex gap-5 font-bold text-[24px]" style={style}>
         {isBtnBack && (
           <div onClick={() => router.back()} className=" cursor-pointer">
             <ArrowLeftOutlined />
